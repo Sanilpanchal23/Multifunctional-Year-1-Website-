@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="speakers.css">
+    <!-- Title of the page -->
+    <title>TechCon 2023</title>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <nav>
+            <!-- Logo -->
+            <img src="images/small logo.png" alt="logo" height="60px" width="350">
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="registration.html">REGISTER</a></li>
+                <li><a href="schedule1.html">SCHEDULE</a></li>
+                <li><a href="speakers.html">SPEAKERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+             <!-- Login/SignUp button -->
+            <a href="registration.html"><button class="button">Login/SignUp</button></a>
+        </nav>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- Speaker 1 -->
+<div class="speaker-card" id="speaker1">
+    <div class="speaker-image">
+        <img src="images/ben.jpg" alt="Speaker 1">
+    </div>
+    <div class="speaker-name">
+        <h2>Ben Thompson</h2>
+    </div>
+    <div class="speaker-details" id="details1">
+        <p>Meet Ben Thompson, our distinguished Chief Innovation Officer at TechCon 2023. With a keen eye for
+            groundbreaking technologies and a passion for driving innovation, Ben leads our team in exploring the
+            frontiers of the tech landscape. His strategic vision and knack for identifying emerging trends make him
+            an invaluable asset as we navigate the future of technology. Ben is not just a professional; he's a
+            visionary shaping the tech landscape at TechCon 2023.</p>
+    </div>
+</div>
+
+<!-- Speaker 2 -->
+<div class="speaker-card" id="speaker2">
+    <div class="speaker-image">
+        <img src="images/emma.jpg" alt="Speaker 2">
+    </div>
+    <div class="speaker-name">
+        <h2>Emma Smith</h2>
+    </div>
+    <div class="speaker-details" id="details2">
+        <p>Introducing Emma Smith, our dynamic Head of Software Development at TechCon 2023. With a passion for
+            turning ideas into robust software solutions, Emma leads our development team in creating cutting-edge
+            applications. Her commitment to quality and innovation ensures that TechCon stays at the forefront of
+            software advancements.</p>
+    </div>
+</div>
+
+<!-- Speaker 3 -->
+<div class="speaker-card" id="speaker3">
+    <div class="speaker-image">
+        <img src="images/joe.jpg" alt="Speaker 3">
+    </div>
+    <div class="speaker-name">
+        <h2>Joe Davis</h2>
+    </div>
+    <div class="speaker-details" id="details3">
+        <p>Say hello to Joe Davis, our brilliant Cybersecurity Specialist at TechCon 2023. Joe's expertise in
+            securing digital landscapes makes him the guardian of our technological fortress. With a mission to
+            keep our systems safe and sound, Joe works tirelessly to stay one step ahead of potential threats,
+            ensuring a secure environment for TechCon attendees.</p>
+    </div>
+</div>
+
+<!-- Speaker 4 -->
+<div class="speaker-card" id="speaker4">
+    <div class="speaker-image">
+        <img src="images/Justin.jpg" alt="Speaker 4">
+    </div>
+    <div class="speaker-name">
+        <h2>Justin Brown</h2>
+    </div>
+    <div class="speaker-details" id="details4">
+        <p>Meet Justin Brown, our charismatic Head of Marketing at TechCon 2023. Justin brings a creative flair to
+            our team, strategically crafting campaigns that elevate TechCon's presence in the tech community. His
+            innovative approach and knack for storytelling make him the driving force behind our successful
+            marketing initiatives.</p>
+    </div>
+</div>
+
+<script>
+    
+    $(document).ready(function() {
+        $(".speaker-card").click(function() {
+            
+            var detailsId = "#" + $(this).attr("id").replace("speaker", "details");
+            $(detailsId).slideToggle();
+        });
+    });
+</script>
+
+
+
+
+
+
+<section class="footer">
+    <footer>
+        <p style="color: white;">&copy; TechCon 2023. All rights reserved.| Designed by Sanil Panchal</p>
+    </footer> 
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,486 @@
+
+
+
+<!---I HAVE HAD TO NAME THIS FILE SCHEDULE1.HTML DUE TO FORMATTING ISSUES--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title of the page -->
+    <title>TechCon 2023</title>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <nav>
+            <!-- Logo -->
+            <img src="images/small logo.png" alt="logo" height="60px" width="350">
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="registration.html">REGISTER</a></li>
+                <li><a href="schedule1.html">SCHEDULE</a></li>
+                <li><a href="speakers.html">SPEAKERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+             <!-- Login/SignUp button -->
+            <a href="registration.html"><button class="button">Login/SignUp</button></a>
+        </nav>
+    </div>
+
+
+
+
+<!-- Conference schedule section -->
+<section class="tablessection">
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            
+            border: 2px solid transparent; /* Set a transparent border for all cells */
+    padding: 8px;
+    text-align: left;
+    box-shadow: 0 0 8px #0ef;
+    transition: box-shadow 0.3s; 
+        }
+
+        th {
+            background-color: rgb(88, 209, 218);
+            color: black;
+            border-color: black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+.tablessection{
+    color: white;
+    background: #211f1f;
+    background-size: auto;
+}
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #211f1f; /* Set background color for the entire page */
+            font-size: 20px;
+        }
+
+
+#dayFilter{
+    color: white;
+    background-color: #211f1f;
+
+}
+
+tr:hover {
+    background-color: rgb(21, 156, 165); /* Change the color to your desired hover color */
+    transition: background-color 0.3s; /* Add a transition for a smooth color change effect */
+}
+
+tr:hover td {
+    box-shadow: 0 0 5px #0ef;}
+
+
+/* Add these styles to your existing CSS */
+select#dayFilter {
+    padding: 10px; /* Add padding for spacing */
+    font-size: 16px; /* Adjust font size */
+    border: 1px solid #0ef; /* Neon blue border */
+    background-color: #211f1f; /* Background color */
+    color: white;
+    border-radius: 5px;
+    appearance: none; /* Remove default appearance (arrow) in some browsers */
+}
+
+select#dayFilter:hover,
+select#dayFilter:focus {
+    border-color:rgb(21, 156, 165); /* Darker blue border on hover/focus */
+}
+
+/* Add a custom arrow icon */
+select#dayFilter::after {
+    position: absolute;
+    color: #0ef;
+}
+
+
+.techlogo {
+    text-align: center; /* Center the child elements horizontally */
+}
+
+.techlogo img {
+    width: 400px; /* Make the image fill the container */
+    max-width: 500px; /* Set a maximum width for the image, adjust as needed */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: inline-block; /* Align the image as an inline-block */
+    padding-top: 30px;
+}
+
+
+
+    </style>
+
+    <!-- Conference schedule title -->
+    <h2 class="ConferenceSchedule"  style="color: rgb(202, 19, 19);">Conference Schedule</h2>
+
+<!-- Day filter -->
+<div>
+    <label for="dayFilter">Select Day:</label>
+    <select id="dayFilter" onchange="showDay(this.value)">
+        <option value="day1">Day 1</option>
+        <option value="day2">Day 2</option>
+        <option value="day3">Day 3</option>
+        <option value="day4">Day 4</option>
+        <option value="day5">Day 5</option>
+    </select>
+</div>
+
+<!-- Day-wise schedule tables  -->
+<table id="day1" class="schedule">
+    <tr>
+        <th>Time</th>
+        <th>Events</th>
+        <th>Team</th>
+        <th>Venue</th>
+    </tr>
+    <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Welcome and Registration</td>
+        <td>Registration Team</td>
+        <td>Main Lobby</td>
+      </tr>
+      <tr>
+        <td>10:00 AM - 11:00 AM</td>
+        <td>Opening Session</td>
+        <td>Keynote Speaker</td>
+        <td>Conference Hall A</td>
+      </tr>
+      <tr>
+        <td>11:00 AM - 12:00 PM</td>
+        <td>Panel Discussion: Industry Trends</td>
+        <td>Panelists: A, B, C</td>
+        <td>Conference Hall B</td>
+      </tr>
+      <tr>
+        <td>12:00 PM - 1:00 PM</td>
+        <td>Lunch Break</td>
+        <td></td>
+        <td>Grand Dining Hall</td>
+      </tr>
+      <tr>
+        <td>1:00 PM - 2:00 PM</td>
+        <td>Workshop: Effective Team Collaboration</td>
+        <td>Facilitator: D</td>
+        <td>Meeting Room 1</td>
+      </tr>
+      <tr>
+        <td>2:00 PM - 3:00 PM</td>
+        <td>Networking Session</td>
+        <td>Attendees</td>
+        <td>Networking Lounge</td>
+      </tr>
+      <tr>
+        <td>3:00 PM - 4:00 PM</td>
+        <td>Guest Speaker Presentation</td>
+        <td>Guest Speaker E</td>
+        <td>Conference Hall A</td>
+      </tr>
+      <tr>
+        <td>4:00 PM - 5:00 PM</td>
+        <td>Closing Remarks and Q&A</td>
+        <td>Event Organizer</td>
+        <td>Conference Hall B</td>
+      </tr>
+</table>
+
+<table id="day2" class="schedule hidden">
+    <tr>
+        <th>Time</th>
+        <th>Events</th>
+        <th>Team</th>
+        <th>Venue</th>
+    </tr>
+    <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Registration and Breakfast</td>
+        <td>Registration Team</td>
+        <td>Main Lobby</td>
+    </tr>
+    <tr>
+        <td>10:00 AM - 11:00 AM</td>
+        <td>Keynote Address: Innovation in Technology</td>
+        <td>Keynote Speaker</td>
+        <td>Conference Hall A</td>
+    </tr>
+    <tr>
+        <td>11:00 AM - 12:00 PM</td>
+        <td>Panel Discussion: Future Trends in Tech</td>
+        <td>Panelists: X, Y, Z</td>
+        <td>Conference Hall B</td>
+    </tr>
+    <tr>
+        <td>12:00 PM - 1:00 PM</td>
+        <td>Lunch Break</td>
+        <td></td>
+        <td>Grand Dining Hall</td>
+    </tr>
+    <tr>
+        <td>1:00 PM - 2:00 PM</td>
+        <td>Hands-on Workshop: Emerging Technologies</td>
+        <td>Facilitator: W</td>
+        <td>Meeting Room 1</td>
+    </tr>
+    <tr>
+        <td>2:00 PM - 3:00 PM</td>
+        <td>Interactive Tech Showcase</td>
+        <td>Exhibitors</td>
+        <td>Exhibition Hall</td>
+    </tr>
+    <tr>
+        <td>3:00 PM - 4:00 PM</td>
+        <td>Guest Speaker Presentation</td>
+        <td>Guest Speaker F</td>
+        <td>Conference Hall A</td>
+    </tr>
+    <tr>
+        <td>4:00 PM - 5:00 PM</td>
+        <td>Closing Ceremony and Awards</td>
+        <td>Event Organizer</td>
+        <td>Conference Hall B</td>
+    </tr>
+    <tr>
+        <td>5:00 PM</td>
+        <td>Networking Mixer</td>
+        <td></td>
+        <td>Outdoor Terrace</td>
+    </tr>
+</table>
+
+<table id="day3" class="schedule hidden">
+    <tr>
+        <th>Time</th>
+        <th>Events</th>
+        <th>Team</th>
+        <th>Venue</th>
+    </tr>
+    <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Registration and Welcome</td>
+        <td>Registration Team</td>
+        <td>Main Lobby</td>
+    </tr>
+    <tr>
+        <td>10:00 AM - 11:00 AM</td>
+        <td>Opening Keynote: Future of Technology</td>
+        <td>Keynote Speaker</td>
+        <td>Conference Hall A</td>
+    </tr>
+    <tr>
+        <td>11:00 AM - 12:00 PM</td>
+        <td>Panel Discussion: Innovations in Science</td>
+        <td>Panelists: X, Y, Z</td>
+        <td>Conference Hall B</td>
+    </tr>
+    <tr>
+        <td>12:00 PM - 1:00 PM</td>
+        <td>Lunch and Networking</td>
+        <td></td>
+        <td>Grand Dining Hall</td>
+    </tr>
+    <tr>
+        <td>1:00 PM - 2:00 PM</td>
+        <td>Workshop: Future Tech Trends</td>
+        <td>Facilitator: W</td>
+        <td>Meeting Room 1</td>
+    </tr>
+    <tr>
+        <td>2:00 PM - 3:00 PM</td>
+        <td>Tech Showcase and Demos</td>
+        <td>Exhibitors</td>
+        <td>Exhibition Hall</td>
+    </tr>
+    <tr>
+        <td>3:00 PM - 4:00 PM</td>
+        <td>Special Presentation on AI</td>
+        <td>AI Expert</td>
+        <td>Conference Hall A</td>
+    </tr>
+    <tr>
+        <td>4:00 PM - 5:00 PM</td>
+        <td>Closing Ceremony and Awards</td>
+        <td>Event Organizer</td>
+        <td>Conference Hall B</td>
+    </tr>
+</table>
+
+<table id="day4" class="schedule hidden">
+    <tr>
+        <th>Time</th>
+        <th>Events</th>
+        <th>Team</th>
+        <th>Venue</th>
+    </tr>
+    <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Registration and Coffee</td>
+        <td>Registration Team</td>
+        <td>Main Lobby</td>
+    </tr>
+    <tr>
+        <td>10:00 AM - 11:00 AM</td>
+        <td>Morning Keynote: Innovations in Science</td>
+        <td>Keynote Speaker</td>
+        <td>Conference Hall A</td>
+    </tr>
+    <tr>
+        <td>11:00 AM - 12:00 PM</td>
+        <td>Interactive Workshop: Future Technologies</td>
+        <td>Facilitator: Tech Guru Y</td>
+        <td>Meeting Room 2</td>
+    </tr>
+    <tr>
+        <td>12:00 PM - 1:00 PM</td>
+        <td>Lunch Buffet</td>
+        <td></td>
+        <td>Grand Dining Hall</td>
+    </tr>
+    <tr>
+        <td>1:00 PM - 2:00 PM</td>
+        <td>Panel Discussion: AI in Everyday Life</td>
+        <td>Panelists: Z, W, V</td>
+        <td>Conference Hall B</td>
+    </tr>
+    <tr>
+        <td>2:00 PM - 3:00 PM</td>
+        <td>Networking Break</td>
+        <td>Attendees</td>
+        <td>Networking Lounge</td>
+    </tr>
+    <tr>
+        <td>3:00 PM - 4:00 PM</td>
+        <td>Specialized Workshop: Quantum Computing</td>
+        <td>Expert: Dr. Q</td>
+        <td>Meeting Room 3</td>
+    </tr>
+    <tr>
+        <td>4:00 PM - 5:00 PM</td>
+        <td>Closing Ceremony and Awards</td>
+        <td>Event Host</td>
+        <td>Conference Hall A</td>
+    </tr>
+</table>
+
+<table id="day5" class="schedule hidden">
+<tr>
+    <th>Time</th>
+    <th>Events</th>
+    <th>Team</th>
+    <th>Venue</th>
+</tr>
+
+
+<tr>
+    <td>9:00 AM - 10:00 AM</td>
+    <td>Welcome and Check-in</td>
+    <td>Event Staff</td>
+    <td>Main Lobby</td>
+</tr>
+<tr>
+    <td>10:00 AM - 11:00 AM</td>
+    <td>Morning Keynote: Future Innovations</td>
+    <td>Expert Speaker</td>
+    <td>Conference Hall A</td>
+</tr>
+<tr>
+    <td>11:00 AM - 12:00 PM</td>
+    <td>Interactive Workshops</td>
+    <td>Various Facilitators</td>
+    <td>Multiple Rooms</td>
+</tr>
+<tr>
+    <td>12:00 PM - 1:00 PM</td>
+    <td>Lunch Buffet and Networking</td>
+    <td></td>
+    <td>Grand Dining Hall</td>
+</tr>
+<tr>
+    <td>1:00 PM - 2:00 PM</td>
+    <td>Panel Discussion: Future of Technology</td>
+    <td>Panelists: X, Y, Z</td>
+    <td>Conference Hall B</td>
+</tr>
+<tr>
+    <td>2:00 PM - 3:00 PM</td>
+    <td>Tech Demos and Exhibitions</td>
+    <td>Exhibitors</td>
+    <td>Exhibition Hall</td>
+</tr>
+<tr>
+    <td>3:00 PM - 4:00 PM</td>
+    <td>Guest Speaker Session: Innovations in AI</td>
+    <td>AI Expert</td>
+    <td>Conference Hall A</td>
+</tr>
+<tr>
+    <td>4:00 PM - 5:00 PM</td>
+    <td>Closing Ceremony and Awards</td>
+    <td>Event Organizer</td>
+    <td>Conference Hall B</td>
+</tr>
+</table>
+
+<!-- Script to handle showing/hiding tables based on the selected day -->
+<script>
+    function showDay(selectedDay) {
+        // Hide all schedules
+        var schedules = document.querySelectorAll('.schedule');
+        schedules.forEach(function (schedule) {
+            schedule.classList.add('hidden');
+        });
+
+        // Show the selected day's schedule
+        var selectedSchedule = document.getElementById(selectedDay);
+        selectedSchedule.classList.remove('hidden');
+    }
+</script>
+
+</section>
+
+<!-- TechCon logo section -->
+<section class="techlogo">
+
+    <img src="images/TechconLogosched.png" alt="techlogo">
+
+</section>
+
+<!-- Footer section -->
+<section class="footer">
+    <footer>
+        <p style="color: white;">&copy; TechCon 2023. All rights reserved.| Designed by Sanil Panchal</p>
+    </footer> 
+    </section>
+
+
+
+
+
+
+</body>
+</html>

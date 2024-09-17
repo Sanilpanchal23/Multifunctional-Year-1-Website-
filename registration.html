@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title of the page -->
+    <title>TechCon 2023</title>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <nav>
+            <!-- Logo -->
+            <img src="images/small logo.png" alt="logo" height="60px" width="350">
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="registration.html">REGISTER</a></li>
+                <li><a href="schedule1.html">SCHEDULE</a></li>
+                <li><a href="speakers.html">SPEAKERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+             <!-- Login/SignUp button -->
+            <a href="registration.html"><button class="button">Login/SignUp</button></a>
+        </nav>
+    </div>
+  
+    <!-- Social buttons section -->
+    <section class="social-buttons">
+        <div class="regcontainer">
+            <h2 style="text-align: center;">Log in with</h2>
+    
+            <!-- Social media login buttons -->
+            <div class="button-container">
+                <a href="#" class="fb btn">
+                    <img src="images/icons8-facebook-48.png" alt="Facebook" width="30" height="30">
+                    Facebook
+                </a>
+    
+                <a href="#" class="google btn">
+                    <img src="images/icons8-google-48.png" alt="Google" width="30" height="30">
+                    Google
+                </a>
+    
+                <a href="#" class="instagram btn">
+                    <img src="images/instagram.png" alt="Instagram" width="30" height="30">
+                    Instagram
+                </a>
+            </div>
+            <div class="or-text">
+                <p>or</p>
+            </div>
+        </div>
+    </section>
+
+
+ 
+
+
+<!-- Forms section -->   
+<section class="forms">
+    <div class="mainform" >
+        <div class="form-box">
+            <!-- Login/Register toggle buttons -->
+            <div class="button-box">
+                <div id="buttonreg"></div>
+                <button type="button" class="toggle-button" onclick="login()">Log In</button>
+                <button type="button" class="toggle-button" onclick="register()">Register</button>
+            </div>
+
+            <div class="smalllogo">
+                <img src="images/techconlogoreg.png" height="60" width="300">
+            </div>
+            <!-- Login form -->
+            <form id="login"  class="inputgroup">
+                <input type="text" class="inputfield" placeholder="Enter Username" required>
+                <input type="password" class="inputfield" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-button">Log In</button>
+
+            </form>
+            <!-- Registration form -->
+            <form id="register" class="inputgroup" onsubmit="return validateRegistration()">
+                <input type="text" id="regUsername" class="inputfield" placeholder="Enter Username" required>
+                <input type="email" id="regEmail" class="inputfield" placeholder="Enter Email" required>
+                <input type="password" id="regPassword" class="inputfield" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button type="submit" class="submit-button">Register</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- JavaScript for form toggle -->
+<script>
+    function validateRegistration() {
+                var username = document.getElementById("regUsername").value;
+                var email = document.getElementById("regEmail").value;
+                var password = document.getElementById("regPassword").value;
+
+                // Check if the fields are not empty
+                if (username === "" || email === "" || password === "") {
+                    alert("Please fill in all fields.");
+                    return false;
+                }
+
+
+                return true;
+            }
+
+        var x = document.getElementById("login")
+        var y = document.getElementById("register")
+        var z = document.getElementById("buttonreg")
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left="50px";
+            z.style.left = "110px";
+        }
+
+            function login(){
+            x.style.left = "50px";
+            y.style.left="450px";
+            z.style.left = "0px";
+        }
+
+</script>
+
+
+
+<!-- Footer section -->
+<section class="footer">
+    <footer>
+        <p style="color: white;">&copy; TechCon 2023. All rights reserved.| Designed by Sanil Panchal</p>
+    </footer> 
+</section>
+
+
+</body>
+</html>
